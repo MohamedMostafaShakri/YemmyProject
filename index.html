@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Yummy</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <!--  Loader #1-->
+
+  <!-- <section id="loading">
+    <i class="fa-solid fa-spinner"></i>
+  </section> -->
+
+  <!--  Loader #2-->
+  <section id="loading">
+    <div class="lds-facebook">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <div id="sideBar" class="side-nav-menu min-vh-100 position-fixed d-flex top-0">
+      <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+        <div class="links">
+          <ul class="overflow-hidden">
+            <li onclick="showSearchInputs()" class="py-2 position-relative cursor-pointer">Search</li>
+            <li onclick="getCategories()" class="py-2 position-relative cursor-pointer">Categories</li>
+            <li onclick="getArea()" class="py-2 position-relative cursor-pointer">Area</li>
+            <li onclick="getIngredients()" class="py-2 position-relative cursor-pointer">Ingredients
+            </li>
+            <li onclick="showContacts()" class="py-2 position-relative cursor-pointer">Contact Us</li>
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <div class="footer-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="footer-Text">
+            <p>Copyright © 2019 All Rights <br>Reserved.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+        <div>
+          <img class="logo" src="images/logo.png" alt="" srcset="">
+          <!-- <i class="fa-solid fa-globe d-block mt-3" onclick="toggle_D_L_Mode()" title="Toggle Dark/Light Mode"></i> -->
+          <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
+        </div>
+        <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ------------------------------------------------------------------ -->
+  <div class="container-fluid">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" name="CloseModal" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex row py-5 g-4" id="modal_body">
+            <!-- 
+            <div class="col-md-4">
+              <img class="w-100 rounded-3" src="images/1 (7).jpg" alt="">
+              <h2></h2>
+            </div>
+            <div class="col-md-4">
+              <h2>Instructions</h2>
+              <p></p>
+              <h3><span class="fw-bolder">Area : </span></h3>
+              <h3><span class="fw-bolder">Category : </span>asnncNc</h3>
+              <h3>Recipes : Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat corporis eos expedita explicabo itaque esse repellendus deleniti velit, id ratione repellat, sequi rem? Cumque voluptatem magni iusto ratione excepturi error.</h3>
+              <ul class="list-unstyled d-flex g-3 flex-wrap"></ul>
+
+              <h3>Tags :</h3>
+              <ul class="list-unstyled d-flex g-3 flex-wrap"></ul>
+
+              <a target="_blank" href="#" class="btn btn-success">Source</a>
+              <a target="_blank" href="#" class="btn btn-danger">Youtube</a>
+            </div> -->
+            <!-- ------------------------------------------------------------------ -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ------------------------------------------------------------------ -->
+  <section>
+    <div class="container w-75" id="searchContainer"></div>
+  </section>
+  <!-- ------------------------------------------------------------------ -->
+  <section id="meals-container">
+    <div class="container">
+      <div class="row py-5 g-4" id="rowData"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/Main.js"></script>
+</body>
+
+</html>
